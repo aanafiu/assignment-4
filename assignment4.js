@@ -40,25 +40,44 @@ function sendNotification(email) {
 // console.log(sendNotification(1111111111));
 
 // Problem 3
+// function checkDigitsInName(name) {
+//   if (typeof name !== "string") {
+//     return "Invalid Input";
+//   }
+//   const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+//   let ans = false;
+//   for (const char of name) {
+//     if (digits.includes(char)) {
+//       ans = true;
+//     }
+//   }
+//   return ans;
+// }
 function checkDigitsInName(name) {
   if (typeof name !== "string") {
     return "Invalid Input";
   }
-  const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-  let ans = false;
-  for (const char of name) {
-    if (digits.includes(char)) {
-      ans = true;
+  let flag = false;
+  for(const char of name)
+  {
+    console.log(typeof char, " " ,char);
+    if(!isNaN(char))
+    {
+      flag = true;
+      break;
     }
   }
-  return ans;
+  
+  return flag;
+  
 }
-// console.log(checkDigitsInName("Raj123"));
-// console.log(checkDigitsInName("suman"));
-// console.log(checkDigitsInName("Name2024"));
-// console.log(checkDigitsInName("!@#"));
-// console.log(checkDigitsInName(["raj"]));
+console.log(checkDigitsInName("Raj123"));
+console.log(checkDigitsInName("suman"));
+console.log(checkDigitsInName("Name2024"));
+console.log(checkDigitsInName("!@#"));
+console.log(checkDigitsInName(["raj"]));
 
 // problem 4
 function calculateFinalScore(obj) {

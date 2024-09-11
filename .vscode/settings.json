@@ -2,5 +2,7 @@
   "editor.formatOnSave": false,
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "editor.fontSize": 24,
+  "terminal.integrated.fontSize": 20
 }
